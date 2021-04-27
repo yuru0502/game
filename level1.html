@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>色彩辨識度測試</title>
+    <style>
+        *{box-sizing: border-box;
+        }
+
+        html,body{
+            margin:0;
+            padding: 0;
+
+        }
+
+        .container{
+            background-color: rgb(240, 96, 96);
+            display: flex;
+            align-items: center;
+        }
+
+        .header{
+            width: 80px;
+            height:100vh;
+            display: flex;
+            flex-direction: column;
+            /* background-color: teal; */
+            justify-content:space-between;
+            
+           
+        }
+
+        .score{
+            width: 80px;
+            height: 50px;
+            color: white;
+            font-size: 20px;
+            margin-left: 8PX;
+        }
+
+        .time{
+            width: 80px;
+            height: 50px;
+            background-color: #FFCACA;
+            border-radius: 8px;
+            opacity: 0.5;
+        }
+
+        .pause{
+            width: 60px;
+            height: 40px;
+            background-color: rgb(252, 173, 38);
+            border-radius: 8px;
+            margin: 10px;
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 40px;
+            text-align: center;
+            
+        }
+
+
+
+        .boxes{
+            margin: auto;
+            width: 520px;
+            height: 520px;
+            background-color: #DDDDDD;
+            padding: 10px;
+            border-radius: 10PX;
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+
+        .box{
+            width:50%;
+            height: 50%;
+            border-radius: 10PX;
+            border: 5px solid #DDDDDD;
+            background-color: rgb(33, 78, 175);
+
+        }
+
+        .answer-box{
+            opacity: 0.7;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+        <div class="score">score：</div>
+        <div class="time"></div>
+        <div class="pause">∣∣</div>
+    </div>
+    
+    <div class="boxes">
+        <div class="box answer-box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>    
+    </div>
+
+</div>
+
+<script>
+   var answer=document.querySelector('.answer-box');
+    answer.addEventListener('click',function(){
+        alert('ya~~~')
+    })
+</script>
+
+</body>
+</html>

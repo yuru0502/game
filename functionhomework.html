@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            width: 100px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    結果：<div class="result"></div>
+    <br>
+    <button class="btn1">10!</button>
+    <button class="btn2">15!</button>
+    <button class="btn3">20!</button>
+    
+    <script>
+
+        // 請製作出一個可以由1累乘到n的函示，並將累加結果返回
+      
+
+        function calcN(n){
+            var a=1;
+            for(var i=1 ;i <= n ; i++){
+                a *= i ;
+            }
+            return a ;
+
+        }
+
+        // 製作三顆按鈕分別觸發1相乘到10，1累乘到15，1相乘到20
+        //點擊按鈕將結果顯示在輸出框上 
+        
+        var btn1=document.querySelector('.btn1');
+        btn1.addEventListener('click',function(){
+        var result = calcN(10); 
+        var answer =document.querySelector('.result');
+        answer.innerHTML=result;
+        });
+
+        var btn2=document.querySelector('.btn2');
+        btn2.addEventListener('click',function(){
+        var result = calcN(15); 
+        var answer =document.querySelector('.result');
+        answer.innerHTML=result;
+        });
+
+
+        var btn3=document.querySelector('.btn3');
+        btn3.addEventListener('click',function(){
+        var result = calcN(20); 
+        var answer =document.querySelector('.result');
+        answer.innerHTML=result;
+        });
+
+
+
+    </script>
+</body>
+</html>

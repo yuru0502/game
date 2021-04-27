@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <script>
+
+
+
+        // 函式
+        // function 函式名稱(參數){
+        //     要做的事情
+        // }
+
+        // 內建函式-alert('123')
+
+        // function printNumber(){
+        //     console.log('1');
+        // }
+
+        // 全域變數、區域變數
+        // function須被呼叫才作用，否則先不看
+        // function內變數作用後就結束，不會影響外層
+        // 若function內找不到便會往父層找，然後改變父層ex: number3
+
+
+        // printNumber();
+        var number1 = 10;
+        var number2 = 2 ;
+        var number3 = 5;
+
+        function printNumber(number1,number2){
+            number1 += 1;
+            number2 += 1;
+            number3 += number2 ;
+        }
+        printNumber(7,8);
+        
+        console.log(number1,number2,number3);
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            width: 100px;
+            height: 60px;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn1">1</button>
+    <button class="btn2">2</button>
+    <button class="btn3">3</button>
+    <button class="btn4">4</button>
+    <button class="btn5">5</button>
+
+    <script>
+        // 請製作5個按鈕
+        // 按下按鈕後會談出一個視窗
+
+  // (forEach法)
+  // var buttons= document.querySelectorAll('button');
+  // buttons.forEach(function(btn,index) {
+  //   btn.addEventListener('click',function(){
+  //     alert('ya'+(index+1));
+  //   });
+    
+  // });
+
+
+       
+    // (函式法)
+    
+       function alertYA(data){
+        alert(data);
+    }
+
+    var btn1= document.querySelector('.btn1');
+      btn1.addEventListener('click',function(){
+        alert('ya1')
+      });
+      var btn2= document.querySelector('.btn2');
+      btn2.addEventListener('click',function(){
+        alertYA('ya2');
+      });
+      var btn3= document.querySelector('.btn3');
+      btn3.addEventListener('click',function(){
+        alertYA('ya3');
+      });
+      var btn4= document.querySelector('.btn4');
+      btn4.addEventListener('click',function(){
+        alertYA('ya4');
+      });
+
+      var btn5= document.querySelector('.btn5');
+      btn5.addEventListener('click',function(){
+        alertYA('ya5');
+      });
+
+
+    //   var btn1= document.querySelector('.btn1');
+    //   btn1.addEventListener('click',function(){
+    //     alert('ya');
+    //   });
+    //   var btn2= document.querySelector('.btn2');
+    //   btn2.addEventListener('click',function(){
+    //     alert('ya');
+    //   });
+    //   var btn3= document.querySelector('.btn3');
+    //   btn3.addEventListener('click',function(){
+    //     alert('ya');
+    //   });
+    //   var btn4= document.querySelector('.btn4');
+    //   btn4.addEventListener('click',function(){
+    //     alert('ya');
+    //   });
+
+    //   var btn5= document.querySelector('.btn5');
+    //   btn5.addEventListener('click',function(){
+    //     alert('ya');
+    //   });
+
+    </script>
+
+
+</body>
+</html>

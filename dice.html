@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .btn{
+            width: 200px;
+            height: 50px;
+            background-color: cornflowerblue;
+        }
+
+        .clear{
+            width: 200px;
+            height: 50px;
+            background-color: rgb(206, 114, 132);
+        }
+
+    </style>
+</head>
+<body>
+    
+    <button class=btn>開始</button>
+    <button class="clear">清除</button>
+    <br>
+    狀態：<div class="container"></div>
+
+    <script>
+        // 請製作一款骰子遊戲，按下按鈕後會一直骰骰子，直到骰子三顆相等時停止
+        // 方法1 whlie(){}
+        // 1.按按鈕
+        // var btn=document.querySelector('.btn'); 
+        // var answer =document.querySelector('.container');
+        // btn.addEventListener('click',function(){
+
+        // // 2.隨機三顆骰子
+      
+        
+        // // 3.比較三顆骰子  
+        // var dice1 =0;
+        // var dice2= 1;
+        // var dice3= 2;
+        // var count =0;
+        // //   1.骰子皆相同，遊戲結束
+        // //   2.骰子不相同，遊戲繼續
+        // while( !(dice1 == dice2 && dice2 == dice3) ){
+        // count++;
+        // dice1 = Math.floor(Math.random() * 6) +1;
+        // dice2= Math.floor(Math.random() * 6) +1;
+        // dice3= Math.floor(Math.random() * 6) +1;
+        // answer.innerHTML = `第${count}次骰子結果：${dice1}、${dice2}、${dice3}<br>${answer.innerHTML}`;
+        // // answer.innerHTML += dive1+dive2+dive3
+
+        // }
+
+        //  }) ;
+
+        // //  清空內容
+        //  document.querySelector('.clear').addEventListener('click',function(){
+        //     answer.innerHTML='' ;
+        // })
+
+        // .......................................................
+
+        // 方法2 do{}while()
+
+        // var btn=document.querySelector('.btn'); 
+        // var answer =document.querySelector('.container');
+        // var count =0;
+        // btn.addEventListener('click',function(){
+        //     do{
+        //         count++;
+        //         var dice1 = Math.floor(Math.random() * 6) +1;
+        //         var dice2= Math.floor(Math.random() * 6) +1;
+        //         var dice3= Math.floor(Math.random() * 6) +1;
+        //         answer.innerHTML = `第${count}次骰子結果：${dice1}、${dice2}、${dice3}<br>${answer.innerHTML}`;
+
+        //     }
+        //     while(!(dice1 == dice2 && dice2 == dice3) )
+            
+        // })
+        // document.querySelector('.clear').addEventListener('click',function(){
+        //     answer.innerHTML='' })
+
+        // 方法3
+        var btn=document.querySelector('.btn'); 
+        var answer =document.querySelector('.container');
+        var count =0; 
+        
+        btn.addEventListener('click',function(){
+        while(true){
+         count++
+         var dice1 = Math.floor(Math.random() * 6) +1;
+         var dice2= Math.floor(Math.random() * 6) +1;
+         var dice3= Math.floor(Math.random() * 6) +1;
+         answer.innerHTML = `第${count}次骰子結果：${dice1}、${dice2}、${dice3}<br>${answer.innerHTML}`;
+        //  answer.innerHTML = '第'+count+'次骰子結果：'+dice1 + dice2 +dice3 +"<br>"+ answer.innerHTML
+          
+            if(dice1 == dice2 && dice2 == dice3){
+                // 停止
+                break;
+            }
+        }
+
+        });
+     
+   document.querySelector('.clear').addEventListener('click',function(){
+            answer.innerHTML='' 
+            count =0
+            })
+            
+
+    </script>
+</body>
+</html>
